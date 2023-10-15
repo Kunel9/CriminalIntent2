@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.sample.criminalintent"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.sample.criminalintent"

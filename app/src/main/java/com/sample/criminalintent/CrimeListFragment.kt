@@ -38,4 +38,9 @@ class CrimeListFragment : Fragment() {
         return view
     }
 
+    companion object {
+        fun newInstance(): CrimeListFragment {
+            return CrimeListFragment()
+        }
+    }
 }
