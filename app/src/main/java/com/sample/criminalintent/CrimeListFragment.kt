@@ -31,8 +31,7 @@ class CrimeListFragment : Fragment() {
         val view =
             inflater.inflate(R.layout.fragment_crime_list,
                 container, false)
-        crimeRecyclerView =
-            view.findViewById(R.id.crime_recycler_view) as RecyclerView
+        crimeRecyclerView = view.findViewById(R.id.crime_recycler_view) as RecyclerView
         crimeRecyclerView.layoutManager = LinearLayoutManager(context)
         crimeRecyclerView.adapter = adapter
         return view
@@ -85,11 +84,12 @@ class CrimeListFragment : Fragment() {
             val view = layoutInflater.inflate(R.layout.list_item_crime, parent, false)
             return CrimeHolder(view)
         }
+        override fun getItemCount() = crimes.size
         override fun onBindViewHolder(holder: CrimeHolder, position: Int) {
             val crime = crimes[position]
             holder.bind(crime)
         }
-        override fun getItemCount() = crimes.size
+
     }
 
 
